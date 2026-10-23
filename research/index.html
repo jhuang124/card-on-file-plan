@@ -485,17 +485,17 @@ html{scroll-padding-top:90px}
 .xp-rail .rs.on{border-color:var(--ink);color:var(--black);font-weight:600}
 .xp-rail .ar{color:var(--faint);font-size:14px}
 .xp-steps{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:12px}
-.xs{border:1px solid var(--line);border-radius:6px;background:var(--paper);overflow:hidden;display:flex;flex-direction:column}
-.xs .im{background:var(--sand);display:flex;align-items:center;justify-content:center;min-height:200px;max-height:340px;overflow:hidden;cursor:zoom-in}
-.xs .im img{max-width:100%;max-height:340px;display:block}
-.xs .im.none{color:var(--soft);font-size:12.5px;text-align:center;padding:20px;cursor:default;line-height:1.5}
-.xs .im.none b{display:block;font:11px/1 var(--mono);text-transform:uppercase;letter-spacing:.05em;margin-bottom:6px}
-.xs .bd{padding:12px 14px 14px}
-.xs .st-t{font:10.5px/1 var(--mono);text-transform:uppercase;letter-spacing:.05em;padding:3px 6px;border-radius:2px;display:inline-block;margin-bottom:6px}
-.xs .st-t.entry{background:var(--sand);color:var(--mid)}.xs .st-t.state{background:#fff;color:var(--ink);border:1px solid var(--line2)}.xs .st-t.plan{background:var(--amber-bg);color:var(--amber)}.xs .st-t.pay{background:var(--red-bg);color:var(--err)}.xs .st-t.consent{background:var(--blue-bg);color:var(--blue-dk)}.xs .st-t.done{background:var(--ink);color:#fff}.xs .st-t.email{background:var(--violet-bg);color:var(--violet)}.xs .st-t.fail{background:var(--red-bg);color:var(--err)}
-.xs .nm{font-size:14.5px;font-weight:600;line-height:1.3}
-.xs .cp{font-size:13px;color:var(--mid);margin-top:4px;line-height:1.45}
-.xs .no{font:10.5px/1 var(--mono);color:var(--faint);position:absolute}
+.xcard{border:1px solid var(--line);border-radius:6px;background:var(--paper);overflow:hidden;display:flex;flex-direction:column}
+.xcard .im{background:var(--sand);display:flex;align-items:center;justify-content:center;min-height:200px;max-height:340px;overflow:hidden;cursor:zoom-in}
+.xcard .im img{max-width:100%;max-height:340px;display:block}
+.xcard .im.none{color:var(--soft);font-size:12.5px;text-align:center;padding:20px;cursor:default;line-height:1.5}
+.xcard .im.none b{display:block;font:11px/1 var(--mono);text-transform:uppercase;letter-spacing:.05em;margin-bottom:6px}
+.xcard .bd{padding:12px 14px 14px}
+.xcard .st-t{font:10.5px/1 var(--mono);text-transform:uppercase;letter-spacing:.05em;padding:3px 6px;border-radius:2px;display:inline-block;margin-bottom:6px}
+.xcard .st-t.entry{background:var(--sand);color:var(--mid)}.xcard .st-t.state{background:#fff;color:var(--ink);border:1px solid var(--line2)}.xcard .st-t.plan{background:var(--amber-bg);color:var(--amber)}.xcard .st-t.pay{background:var(--red-bg);color:var(--err)}.xcard .st-t.consent{background:var(--blue-bg);color:var(--blue-dk)}.xcard .st-t.done{background:var(--ink);color:#fff}.xcard .st-t.email{background:var(--violet-bg);color:var(--violet)}.xcard .st-t.fail{background:var(--red-bg);color:var(--err)}
+.xcard .nm{font-size:14.5px;font-weight:600;line-height:1.3}
+.xcard .cp{font-size:13px;color:var(--mid);margin-top:4px;line-height:1.45}
+.xcard .no{font:10.5px/1 var(--mono);color:var(--faint);position:absolute}
 .xp-facts{margin-top:18px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
 .xp-facts .card{padding:12px 14px}
 .xp-facts .k{font:10.5px/1 var(--mono);color:var(--soft);text-transform:uppercase;letter-spacing:.05em;margin-bottom:5px}
@@ -959,11 +959,12 @@ html{scroll-padding-top:90px}
   <a href="#r-summary"><span class="no">01</span>Summary</a>
   <a href="#r-scope"><span class="no">02</span>The Post-Lapse Moment</a>
   <a href="#r-models"><span class="no">03</span>Five Restart Models</a>
-  <a href="#r-decisions"><span class="no">04</span>Seven Design Decisions</a>
-  <a href="#r-blueprint"><span class="no">05</span>Restart Page Blueprint</a>
-  <a href="#r-reqs"><span class="no">06</span>Requirements Candidates</a>
-  <a href="#r-discovery"><span class="no">07</span>Discovery Plan</a>
-  <a href="#r-sources"><span class="no">08</span>Evidence Notes</a>
+  <a href="#r-publishers"><span class="no">04</span>How Publishers Handle Returners</a>
+  <a href="#r-decisions"><span class="no">05</span>Seven Design Decisions</a>
+  <a href="#r-blueprint"><span class="no">06</span>Restart Page Blueprint</a>
+  <a href="#r-reqs"><span class="no">07</span>Requirements Candidates</a>
+  <a href="#r-discovery"><span class="no">08</span>Discovery Plan</a>
+  <a href="#r-sources"><span class="no">09</span>Evidence Notes</a>
 </nav>
 <main>
 
@@ -975,7 +976,7 @@ html{scroll-padding-top:90px}
     <div class="card fact"><div class="k">The norm</div><div class="v">Sign-up funnel, reused</div><div class="s">HBO Max, Paramount+, Audible, Amazon, Strava and Duolingo all re-pick the plan and re-add or confirm payment</div></div>
     <div class="card fact"><div class="k">Documented restart screens</div><div class="v">2 of 13</div><div class="s">Only HBO Max (Welcome back) and Netflix (welcome-back setup) describe a lapsed-specific screen</div></div>
     <div class="card fact"><div class="k">Silent one-click</div><div class="v">0 of 13</div><div class="s">No service documents charging a stored card without a visible price and consent for a fully ended plan</div></div>
-    <div class="card fact"><div class="k">Preselected old plan</div><div class="v">Platforms only</div><div class="s">Google Play restarts the same base plan; everyone else sends returners back to the plan picker</div></div>
+    <div class="card fact"><div class="k">Publisher returner pricing</div><div class="v">Windows, not rules</div><div class="s">Intro offers reopen after 90 days (Globe), 365 (LA Times) or 18 months (New Yorker); inside the window a returner pays full price</div></div>
   </div>
 
   <div class="msg"><div class="mn">1</div><div>
@@ -1044,8 +1045,26 @@ html{scroll-padding-top:90px}
   </figure>
 </section>
 
+
+<section class="chapter" id="r-publishers">
+  <div class="ch-no">04 · Publishers</div>
+  <h2>How Publishers Handle Returners</h2>
+  <p class="lead">No publisher reviewed documents a post-lapse restart screen; the Financial Times tells lapsed readers to "resubscribe to a new subscription plan." What publishers do document is the pricing rule a returner meets, and it varies from 90 days to never.</p>
+  <figure class="ex" id="rx6">
+    <div class="ex-h"><div class="ex-no">Exhibit R6</div><div class="ex-t">Publishers gate intro offers for former subscribers by a cooling-off window, and The Atlantic has no rule at all</div><p class="ex-s">How long after lapsing a former subscriber becomes eligible for the new-subscriber offer again.</p></div>
+    <div class="ex-b"><div id="pubWin"></div></div>
+    <div class="ex-f"><b>Note:</b> "Never" means introductory offers are for first-time subscribers only. "No window" means the fine print excludes only current subscribers. WSJ and Bloomberg are secondary sources. <b>Sources:</b> offer-page fine print and terms, read October 23, 2026.</div>
+  </figure>
+  <div class="grid g3" style="margin-top:14px">
+    <div class="card"><h4>The Washington Post program</h4><p class="small">Win-back offers tailored by engagement, location and prior rate. The journey opens with a thank-you plus an offer to resubscribe, then a survey, benefit emails and tailored offers. "The optimal resubscription window falls within the first 60 days after cancellation." Results: resubscription 2 points above benchmark, half as many visits to resubscribe, 5% higher retention, about $20 more three-year value per customer.</p><p class="xs muted"><a href="https://www.inma.org/blogs/digital-subscriptions/post.cfm/subscriber-win-back-strategy-at-washington-post-is-driven-by-engagement-location-prior-rate">INMA, October 2023</a></p></div>
+    <div class="card"><h4>The recognized paywall exists</h4><p class="small">Insider used Piano to find churned readers still visiting and served a tailored paywall that acknowledged them as former subscribers at a reduced rate. Three offers beat one on mobile. Piano's own test: a 20% return offer on the second pageview converted 0.71% against 0.38% at full price.</p><p class="xs muted"><a href="https://www.inma.org/blogs/ideas/post.cfm/insider-campaign-targets-wins-back-former-subscribers">INMA, June 2021</a> · <a href="https://www.piano.io/resources/how-winback-campaigns-turn-churned-readers-into-returning-subscribers">Piano</a></p></div>
+    <div class="card"><h4>One-tap resubscribe is tooling, not practice</h4><p class="small">Arc XP documents a returning-user pattern: a signed-in visitor with saved cards and no active subscription sees "We miss you," the card as "Visa ending in 1111," and "Rejoin now." Piano's how-to sends churned users a link that "returns users to the same term they previously had." No publisher documents either live.</p><p class="xs muted"><a href="https://dev.arcxp.com/blog/win-back-and-upgrade-your-audience/">Arc XP</a> · <a href="https://docs.piano.io/en/subscriptions/how-to-target-churned-users-via-email">Piano docs</a></p></div>
+  </div>
+  <div class="callout warn"><p><span class="k">Implication for the restart page</span>The price a returner sees is a policy decision the page cannot dodge. Today a lapsed Atlantic reader lands on the PSP and sees whatever a stranger sees, which means the intro offer with no eligibility rule. Decision 4 in the next section needs a written window before the page can state a price.</p></div>
+</section>
+
 <section class="chapter" id="r-decisions">
-  <div class="ch-no">04 · Design</div>
+  <div class="ch-no">05 · Design</div>
   <h2>Seven Design Decisions</h2>
   <p class="lead">Each decision lists the options the market uses, who uses them, the trade-off, and a recommendation. The recommendations add up to the blueprint in Section 05.</p>
   <figure class="ex" id="rx4">
@@ -1056,7 +1075,7 @@ html{scroll-padding-top:90px}
 </section>
 
 <section class="chapter" id="r-blueprint">
-  <div class="ch-no">05 · Blueprint</div>
+  <div class="ch-no">06 · Blueprint</div>
   <h2>Restart Page Blueprint</h2>
   <p class="lead">The seven recommendations assembled into one screen. It is a requirements sketch, not a design: the Figma comps decide the look.</p>
   <figure class="ex" id="rx5">
@@ -1093,14 +1112,14 @@ html{scroll-padding-top:90px}
 </section>
 
 <section class="chapter" id="r-reqs">
-  <div class="ch-no">06 · Requirements</div>
+  <div class="ch-no">07 · Requirements</div>
   <h2>Requirements Candidates</h2>
-  <p class="lead">Twenty-three candidate requirements from the evidence, tagged by how settled they are. "Must" has a legal, network or platform basis; "Should" has market precedent; "Decide" needs a product call; "Confirm" needs an internal fact.</p>
+  <p class="lead">Twenty-six candidate requirements from the evidence, tagged by how settled they are. "Must" has a legal, network or platform basis; "Should" has market precedent; "Decide" needs a product call; "Confirm" needs an internal fact.</p>
   <div class="reqs" id="reqList"></div>
 </section>
 
 <section class="chapter" id="r-discovery">
-  <div class="ch-no">07 · Discovery</div>
+  <div class="ch-no">08 · Discovery</div>
   <h2>Discovery Plan</h2>
   <p class="lead">What the team needs to learn before the requirements are final, grouped by the question each answers. Most of these are internal data or a short round of returner interviews.</p>
   <div class="disc" id="discList"></div>
@@ -1115,7 +1134,7 @@ html{scroll-padding-top:90px}
 </section>
 
 <section class="chapter" id="r-sources">
-  <div class="ch-no">08 · Evidence</div>
+  <div class="ch-no">09 · Evidence</div>
   <h2>Evidence Notes</h2>
   <div class="grid g2">
     <div class="card"><h4>What Is Solid</h4><ul class="small">
@@ -1126,7 +1145,7 @@ html{scroll-padding-top:90px}
     <div class="card"><h4>What Is Thin</h4><ul class="small">
       <li>No service was observed in a live lapsed account; screens beyond the documented button labels are unknown.</li>
       <li>Disney+, Hulu and YouTube Premium help centers could not be read; their rows rest on secondary sources.</li>
-      <li>No publisher documents a post-lapse resubscribe flow; publisher evidence is on the Strategy tab and in the Explorer.</li>
+      <li>No publisher documents a post-lapse resubscribe screen; NYT, WSJ, Economist and Bloomberg help centers could not be read, so their rows rest on offer fine print and secondary sources.</li>
       <li>Returner pricing policies are mostly undocumented; Apple's win-back rules are the one explicit model.</li></ul></div>
   </div>
 </section>
@@ -1562,7 +1581,9 @@ const REQ = [
     ['Preselect the previous plan; open the plan list in place on Change', 'should', 'Google Play same base plan; Atlantic concept'],
     ['Map a retired plan to the nearest current plan and say so on the page', 'must', 'Netflix Basic removal'],
     ['Show "price changed since you last subscribed" when it has', 'should', 'NY and CA price-change notice rules'],
-    ['Write returner-offer eligibility as a rule (lapse window, tenure, cooldown) and show it next to the offer', 'decide', 'Apple win-back model; FTC materiality'],
+    ['Write returner-offer eligibility as a rule (lapse window, tenure, cooldown) and show it next to the offer', 'decide', 'Apple win-back model; publisher windows of 90 days to 18 months'],
+    ['Decide what a returner inside the intro-offer window pays, and say it plainly: today a lapsed reader sees the same PSP as a stranger', 'decide', 'New Yorker, LA Times, Boston Globe fine print'],
+    ['Return a lapsed reader to the term they previously had, by default, with a tailored link from win-back email', 'should', 'Piano churned-users how-to; Washington Post prior-rate targeting'],
     ['New billing cycle from the restart day; state the first charge date', 'should', 'Netflix welcome-back path; Peloton; Stripe default'],
     ['Create a new Zuora subscription; invoice and collect that subscription only', 'must', 'Zuora POST /v1/subscriptions']]},
   {g:'Entry, identity and continuity', items:[
@@ -1570,7 +1591,8 @@ const REQ = [
     ['Win-back email links carry identity so a signed-out reader lands on the restart page', 'should', 'Netflix email; Apple redemption URLs'],
     ['Give the welcome-back gate a real "Not now, continue reading" and cap exposure', 'must', 'HBO Max gate; Piano frequency caps'],
     ['State what comes back on the restart page and confirmation; define retention windows in the privacy policy', 'should', 'HBO Max, Netflix 24 months, Strava'],
-    ['Offer an undo path on the confirmation and name the refund window', 'should', 'NN/g on one-click risk']]},
+    ['Offer an undo path on the confirmation and name the refund window', 'should', 'NN/g on one-click risk'],
+    ['Start win-back outreach inside the first 60 days after lapse, keyed to engagement and prior rate', 'should', 'Washington Post lifecycle program (INMA 2023)']]},
   {g:'Edge cases', items:[
     ['Email changed: account lookup path instead of a dead end', 'must', 'Netflix "can’t find an account"; NYT library help'],
     ['Store-billed (Apple or Google) returner on web: detect and route; block duplicate purchase while a store subscription is live', 'must', 'HBO Max, Peacock, Disney+ store-billed rules'],
@@ -1586,6 +1608,20 @@ const DISC = [
   ['What they expect', ['Do returners expect their old plan and price, or do they shop again?', 'Do they know we still hold their card, and does that reassure or alarm them?', 'What do they assume they lost (saved stories, newsletters, print address)?']],
   ['What stops them', ['Where in Account, PSP, Checkout do returners drop today?', 'How often is the stored card expired or declined at restart?', 'How many returners are pre-Zuora, store-billed, or on a retired plan?']],
   ['What we can promise', ['What is actually retained on lapse, and for how long?', 'Which plans can be restarted as-is, and which must map to a current plan?', 'Can Zuora keep a cancelled subscription alive to term end for an undo path?']]
+];
+
+/* Publisher intro-offer eligibility windows for former subscribers (days). null = no window stated. */
+const PUBWIN = [
+  {n:'Boston Globe', days:90, rule:'"Offer valid for those who have not had digital access in the last 90 days."', src:['subscribe.bostonglobe.com','http://subscribe.bostonglobe.com/B2727/'], ev:2},
+  {n:'The Wall Street Journal', days:180, rule:'Promos "only for new WSJ subscribers who have not been subscribed for the past 180 days" (2015; enforcement unclear).', src:['Doctor of Credit','https://www.doctorofcredit.com/free-money-or-miles-with-wsj-subscription-new-members-only/'], ev:1},
+  {n:'Los Angeles Times', days:365, rule:'"Only available to new subscribers and subscribers who have not had an active subscription in the past 365 days."', src:['latimes.com/subscriptions','https://www.latimes.com/subscriptions'], ev:2},
+  {n:'Financial Times', days:365, rule:'"You may not take more than one Trial Subscription in any twelve-month period." Trials only.', src:['FT terms','https://help.ft.com/legal-privacy/terms-and-conditions/'], ev:2},
+  {n:'The New Yorker', days:548, rule:'"Introductory offers are only available to customers who have not been subscribed to The New Yorker within the last 18 months."', src:['newyorker.com offer page','https://www.newyorker.com/v2/offers/tnya01080'], ev:2},
+  {n:'Bloomberg', days:-1, rule:'Introductory offers "can only be redeemed by first time subscribers"; orders may be repriced.', src:['Bloomberg help','https://www.bloomberg.com/help/question/introductory-offers/'], ev:1},
+  {n:'Apple News+', days:-1, rule:'"New subscribers only." The device-promo trial "cannot be reactivated."', src:['apple.com/apple-news','https://www.apple.com/apple-news/'], ev:2},
+  {n:'The Guardian', days:0, rule:'"Only available to new subscribers who do not have an existing subscription." Excludes current subscribers only.', src:['support.theguardian.com','https://support.theguardian.com/us/contribute'], ev:2},
+  {n:'The New York Times', days:null, rule:'"Current subscribers not eligible." No former-subscriber rule or window stated.', src:['Slickdeals, Mar 2026','https://slickdeals.net/f/19300899-1-year-digital-subscription-to-ny-times-1-week-all-access-4'], ev:1},
+  {n:'The Atlantic today', days:null, rule:'No former-subscriber rule. Lapsed readers see whatever the PSP shows a stranger.', src:[], ev:2}
 ];
 
 /* Flow explorer: one entry per service, steps in journey order. Each step may name an
@@ -2059,6 +2095,23 @@ function decRender(){
 $('decList').addEventListener('click', e => { const b = e.target.closest('[data-d]'); if (b) { decNow = +b.dataset.d; decRender(); } });
 decRender();
 
+/* ---------- Restart tab: publisher windows ---------- */
+(function(){
+  const rows = PUBWIN.slice().sort((a, b) => { const v = x => x.days === null ? -2 : x.days === -1 ? 9999 : x.days; return v(a) - v(b); });
+  const max = 548;
+  $('pubWin').innerHTML = `<div class="cbars">${rows.map(r => {
+    const atl = r.n.startsWith('The Atlantic');
+    let w, lab, col;
+    if (r.days === null) { w = 0; lab = 'No window'; col = 'var(--faint)'; }
+    else if (r.days === -1) { w = 100; lab = 'Never'; col = 'var(--err)'; }
+    else if (r.days === 0) { w = 0; lab = 'None'; col = 'var(--green)'; }
+    else { w = r.days / max * 100; lab = r.days >= 365 ? (r.days / 365).toFixed(r.days % 365 ? 1 : 0) + (r.days === 365 ? ' year' : ' years') : r.days + ' days'; col = atl ? 'var(--ink)' : 'var(--amber)'; }
+    return `<div class="cb" style="grid-template-columns:190px minmax(0,1fr) 90px"><div class="lab" style="${atl ? 'font-weight:600' : ''}">${r.n}<span>${r.ev === 1 ? 'Secondary source' : 'Observed fine print'}</span></div><div class="track" title="${esc(r.rule)}"><div class="fill" data-w="${w}" style="width:0;background:${col}"></div></div><div class="val" style="font-size:18px">${lab}</div></div>`;
+  }).join('')}</div>
+  <div class="legend" style="margin-top:14px"><span><i class="sw" style="background:var(--amber)"></i>Cooling-off window before intro pricing reopens</span><span><i class="sw" style="background:var(--err)"></i>First-time subscribers only</span><span><i class="sw" style="background:var(--green)"></i>Excludes current subscribers only</span><span><i class="sw" style="background:var(--faint)"></i>No rule stated</span></div>
+  <p class="xs muted" style="margin-top:10px">Hover a bar for the exact fine print.</p>`;
+})();
+
 /* ---------- Restart tab: requirements and discovery ---------- */
 const RLAB = {must:'Must', should:'Should', decide:'Decide', confirm:'Confirm'};
 $('reqList').innerHTML = REQ.map(g => `<div class="req-g"><h4>${g.g}</h4>${g.items.map(it => `<div class="req"><span><span class="tag t-${it[1]}">${RLAB[it[1]]}</span></span><span>${it[0]}</span><span class="src">${it[2]}</span></div>`).join('')}</div>`).join('');
@@ -2079,7 +2132,7 @@ function xpRender(){
   $('xpBody').innerHTML = `<div class="fade">
     <div class="xp-head"><div><h3>${x.name}</h3><div class="mdl">${XSEG[x.seg]}${x.model !== 'none' && RMODEL[x.model] ? ' · ' + RMODEL[x.model].name : ''}</div></div><div class="xp-src">Sources: ${x.src.map(s => `<a href="${s[1]}">${s[0]}</a>`).join(' · ')}</div></div>
     <div class="xp-rail">${x.steps.map((s, i) => `<span class="rs" data-go="${i}"><i style="background:${{entry:'var(--soft)',state:'var(--ink)',plan:'var(--amber)',pay:'var(--err)',consent:'var(--blue)',done:'var(--green)',email:'var(--violet)',fail:'var(--err)'}[s.t]}"></i>${XST[s.t]}</span>${i < x.steps.length - 1 ? '<span class="ar">→</span>' : ''}`).join('')}</div>
-    <div class="xp-steps">${x.steps.map((s, i) => `<div class="xs" id="xs-${i}">${s.img ? `<div class="im" data-lb="${imgSrc(s.img)}" data-cap="${esc(x.name + ': ' + s.n)}"><img src="${imgSrc(s.img)}" alt="${esc(x.name + ' ' + s.n)}" loading="lazy"></div>` : `<div class="im none"><b>No public screenshot</b>Documented in help text only</div>`}<div class="bd"><span class="st-t ${s.t}">${XST[s.t]}${s.fit === 'adjacent' ? ' · in term or trial' : ''}</span><div class="nm">${i + 1}. ${s.n}</div>${s.c ? `<div class="cp">${s.c}</div>` : ''}${s.date ? `<div class="cp" style="font-size:11.5px;color:var(--soft)">Captured: ${s.date}</div>` : ''}</div></div>`).join('')}</div>
+    <div class="xp-steps">${x.steps.map((s, i) => `<div class="xcard" id="xs-${i}">${s.img ? `<div class="im" data-lb="${imgSrc(s.img)}" data-cap="${esc(x.name + ': ' + s.n)}"><img src="${imgSrc(s.img)}" alt="${esc(x.name + ' ' + s.n)}" loading="lazy"></div>` : `<div class="im none"><b>No public screenshot</b>Documented in help text only</div>`}<div class="bd"><span class="st-t ${s.t}">${XST[s.t]}${s.fit === 'adjacent' ? ' · in term or trial' : ''}</span><div class="nm">${i + 1}. ${s.n}</div>${s.c ? `<div class="cp">${s.c}</div>` : ''}${s.date ? `<div class="cp" style="font-size:11.5px;color:var(--soft)">Captured: ${s.date}</div>` : ''}</div></div>`).join('')}</div>
     ${x.facts.plan ? `<div class="xp-facts"><div class="card"><div class="k">Plan on return</div><p>${x.facts.plan}</p></div><div class="card"><div class="k">Payment on return</div><p>${x.facts.pay}</p></div><div class="card"><div class="k">What comes back</div><p>${x.facts.keep}</p></div></div>` : ''}
   </div>`;
 }
